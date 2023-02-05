@@ -1,0 +1,26 @@
+.selectedMovie{
+    background-color: #0f10143b;
+}
+
+.selectedMovie_cont{
+    background-color: #0f0f0fe9;
+}
+
+.DialogContent{
+    height: 500px;
+    overflow: auto;
+}
+.DialogContent::-webkit-scrollbar{
+    width: 5px;
+}
+
+.MainBackGround {
+    background-size:cover;
+    width: 100%;
+    height:450px;
+    background-repeat: no-repeat;
+    overflow: auto
+}
+.MainBackGround::-webkit-scrollbar{
+    width: 0px
+}

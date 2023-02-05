@@ -1,0 +1,279 @@
+.movieCont{
+    display: flex;
+    background-color: #1d1f23!important;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: auto;
+    padding: 20px;
+}
+
+.movieCont::-webkit-scrollbar{
+    width: 0px;
+}
+
+.genre{
+    display: flex;
+    margin: 20px 0px;
+}
+
+.buttonGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2px;
+    margin-bottom: 0px !important;
+    padding-bottom: 20px;
+    width: 60%;
+    margin-bottom: 6.5vh;
+    transform: 0.2s all;
+}
+
+.genreTagON {
+    padding: 10px 20px;
+    color: black !important;
+    background-color: #b1b4b6;
+    border-radius: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+    margin: 4px 5px;
+    border-bottom: 4px solid #43a8ae;
+}
+.genreTagON:hover {
+    background-color: #adb5bd !important;
+}
+.genreTagOFF {
+    color: #fff !important;
+    padding: 10px 20px;
+    background-color: #43a8ae;
+    border-radius: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+    margin: 4px 5px;
+}
+.genreTagOFF:hover {
+    background-color: #43a9aec0 !important;
+}
+
+.resultMovieCont{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.resultMovieCont::-webkit-scrollbar{
+    width: 2px;
+}
+/* ---Movie Card --- */
+
+.Main_Card {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.Movie_Title {
+    width: 100%;
+    font-size: 17px;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.movie_voting {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    background-color: #0f1014;
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 25px;
+}
+
+.Poster {
+    height: 355px;
+    max-width: 100%;
+    border: 0.002px white solid;
+    transform: 0.3s;
+    border-radius: 5px;
+}
+.Main_Card:hover {
+    padding-bottom: 0;
+}
+
+/* 
+single movie page */
+.selectedMovie{
+    background-color: #0f10143b;
+}
+
+.selectedMovie_cont{
+    background-color: white;
+}
+
+.DialogContent{
+    height: 500px;
+    overflow: auto;
+}
+.DialogContent::-webkit-scrollbar{
+    width: 5px;
+}
+
+.MainBackGround {
+    background-size:cover;
+    width: 100%;
+    height:450px;
+    background-repeat: no-repeat;
+    overflow: auto
+}
+.MainBackGround::-webkit-scrollbar{
+    width: 0px
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Roboto:wght@400;500;700&display=swap");
+.movie_details {
+    margin-top: 3%;
+    font-family: "Montserrat", sans-serif;
+}
+.overveiwContent {
+    font-size: medium;
+}
+.left_box {
+    color: #fff !important;
+    margin: 15px 0;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+.main_img {
+    height: 420px;
+    box-shadow: -4px 4px 5px 0 #000;
+}
+.casting {
+    transition: width 0.5s, height 0.5s;
+    text-decoration: none;
+}
+.casting a {
+    text-decoration: none;
+}
+
+.casting img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 35px;
+    transition: width 0.5s, height 0.5s;
+}
+.topTitle_Movie {
+    font-weight: 700;
+}
+.casting img:hover {
+    height: 80px;
+    width: 80px;
+}
+
+.ratingcont{
+    position: absolute;
+    bottom: 0;
+}
+
+.trailer_bttn {
+    margin-top: 15px;
+    text-decoration: none !important;
+    color: #fff !important;
+    border-radius: 0.4em;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-weight: 400;
+    padding: 4px 9px;
+    background: #43a8ae;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border-color: #43a8ae !important;
+    transition: width 0.2s, height 0.2s;
+}
+
+.trailerContainer {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+
+.youtube_container {
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.close_bttn {
+    z-index: 100;
+    text-decoration: none !important;
+    color: #fff !important;
+    border-radius: 0.4em;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 4px 9px;
+    background: #43a8ae;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border-color: #43a8ae !important;
+    transition: width 0.2s, height 0.2s;
+}
+
+.close_bttn:hover {
+    padding: 5px 12px;
+}
+.DisplayOn {
+    display: flex;
+    justify-content: center;
+}
+.DisplayOFF {
+    display: none;
+}
+
+
+
+/* Recommended Movies */
+.recommendedMovie{
+    margin: 20px 0;
+}
+
+.recommendedGrid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 950px) {
+    .movie_voting {
+        right: 3.5%;
+    }
+}
+@media screen and (max-width: 560px) {
+    .movie_voting {
+        right: 20.981%;
+    }
+    .Poster {
+        height: 250px;
+    }
+    .Poster:hover {
+        position: relative;
+        height: 252px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .movie-voting {
+        right: 5%;
+    }
+}

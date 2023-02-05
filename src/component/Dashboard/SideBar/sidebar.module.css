@@ -1,0 +1,25 @@
+.sidebar{
+    width: 72px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #202225;
+}
+.groupButton{
+    width: 42px;
+    height: 42px;
+    border-radius: 16px;
+    margin-top: 10px;
+    color: white;
+    padding: 0;
+    outline: none;
+    border: 0px none;
+    background-color: #43a8ae;
+}
+.groupButton:focus{
+    outline: none;
+}
+.groupButton i{
+    font-size: 17px;
+}

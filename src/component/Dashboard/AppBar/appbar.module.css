@@ -1,0 +1,61 @@
+.appbar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.367);
+    background-color: #36393F;
+    width: calc(100% - 296px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.menuBtn, .menuBtn:focus{
+    border: 0px none;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: white;
+}
+
+.menuItem i{
+    margin-right: 12px;
+}
+.typing{
+    margin-left: 5px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.typing .indicator{
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 6px;
+    height: 6px;
+    margin-top: 10px;
+}
+.sideItems{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-around;
+}
+
+.systems button , .systems button:focus{
+    outline: none;
+    border: 0 none;
+    color: white;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.recomButton{
+    background-color: #276d70!important;
+    padding: 4px 10px!important;
+    font-size: 13px!important;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0px 3px 3px rgba(106, 106, 106, 0.103), 0px 2px 16px rgba(111, 111, 111, 0.196);
+}

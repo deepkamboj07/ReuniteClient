@@ -1,0 +1,16 @@
+body{
+    margin: 0!important;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+}
+.container img{
+    max-width: 80%rem;
+    width: 45rem;
+    height: 45rem;
+    align-items: center;
+    justify-items: center;
+}

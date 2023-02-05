@@ -1,0 +1,136 @@
+
+.fullScreen{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #202225;
+}
+.minimized{
+    bottom: 0px;
+    right:0px;
+    width: 30%;
+    height: 40vh;
+    position: absolute;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #202225;
+    box-shadow: 0px 2px 4px rgba(63, 63, 63, 0.623), 0px 2px 16px rgba(100, 100, 100, 0.541);
+}
+
+.resizeBtnCont{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.resizeBtnCont button, .resizeBtnCont button:focus, .buttonRoom, .buttonRoom:focus{
+    outline: none;
+    color: white;
+    border: 0 none;
+    background-color: transparent;
+}
+.fullScreen .buttonRoom{
+    margin: 0px 20px;
+}
+.fullScreen .buttonRoom svg{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.minimized .buttonRoom{
+    margin: 0px 8px;
+}
+.videoContainer{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.roomButtonsContainer{
+    width: 100%;
+    height: 15%;
+    background-color: #43a8ae;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userVideoContainer{
+    position: relative;
+}
+.videoContainer .userVideoContainer{
+    height: 49.5%;
+    width: 49.5%;
+    background-color: black;
+    border-radius: 8px;
+    margin: 0px 1px;
+}
+.singleContainer,.twoUserContainer{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.singleContainer::-webkit-scrollbar ,.twoUserContainer::-webkit-scrollbar, .videoContainer::-webkit-scrollbar{
+    width: 0px;
+}
+
+.twoUserContainer .userVideoContainer{
+    height: 90%!important;
+    width: 46%!important;
+    background-color: black;
+    border-radius: 8px;
+    margin: 0 2px;
+}
+.singleContainer .userVideoContainer{
+    height: 90%!important;
+    width: 90%!important;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.hideAnotherVideo .userVideoContainer{
+    display: none;
+}
+
+.videoBigContainer{
+    height: 98%!important;
+    width: 98%!important;
+    background-color: black;
+    border-radius: 8px;
+    position: relative;
+}
+
+.videoEL{
+    width: 100%;
+    height: 100%;
+}
+
+.vidoResizeBtn,.vidoResizeBtn:focus{
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: 0 none;
+    position:absolute;
+    right: 10px;
+    bottom: 5px;
+}
+.vidoResizeBtn svg{
+    width: 0.8rem;
+    height: 0.8rem;
+}

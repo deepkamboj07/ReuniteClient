@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sofia+Sans+Semi+Condensed&display=swap');
+.container{
+    width: 97%;
+    display: flex;
+    margin-top: 10px;
+}
+.avtarContainer{
+    width: 70px;
+}
+
+.message_conatiner{
+    display: flex;
+    flex-direction: column;
+}
+.msg_content{
+    color: #e0dfdfda;  
+    font-size: 15px;
+}
+.sameAuthorContent{
+    color: #e0dfdfda; 
+    width: 97%;
+    font-size: 14px;
+}
+.sameAuthorText{
+    margin-left: 70px;
+}
+
+.newMessageCont{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.newInput{
+    background: #2a2b30;
+    width: 90%;
+    border-radius: 10px;
+    height: 44px;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 0px 10px;
+}
+.newInput input{
+    height: 100%;
+    width: 95%;
+    background: transparent;
+    outline: none;
+    border: 0 none;
+    color: white;
+    overflow: auto;
+}
+
+.sendBtn, .sendBtn:focus{
+    width: 5%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.sendBtn .icon{
+    color: #43a8ae;
+    font-size: 30px;
+}
+
+.sendBtn_err, .sendBtn_err:focus{
+    width: 5%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    pointer-events: none;
+}
+
+.sendBtn_err .icon{
+    color: #565757;
+    font-size: 30px;
+}
+
+.DateSeprator{
+    width: 95%;
+    background-color: #b9bbbe;
+    height: 1px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.dateLabel{
+    background-color: #36393f;
+    position: absolute;
+    left: 45%;
+    top: -10px;
+    color: #b9bbbe;
+    padding: 0 5px;
+    font-size: 14px;
+}

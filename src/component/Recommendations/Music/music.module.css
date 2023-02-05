@@ -1,0 +1,187 @@
+.dilogContent{
+    display: flex;
+    background-color: #1d1f23!important;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: auto;
+    padding: 20px;
+}
+
+.dilogContent::-webkit-scrollbar{
+    width: 0px;
+}
+.resultMusicCont{
+    margin: 20px 40px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* ---- card--- */
+
+
+.Main_Card {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.Movie_Title {
+    width: 100%;
+    font-size: 17px;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.movie_voting {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    background-color: #0f1014;
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 25px;
+}
+
+.Poster {
+    height: 340px;
+    max-width: 100%;
+    border: 0.002px white solid;
+    transform: 0.3s;
+    border-radius: 5px;
+}
+.Main_Card:hover {
+    padding-bottom: 0;
+}
+
+
+/* 
+single movie page */
+.selectedMovie{
+    background-color: #0f101498;
+}
+
+.selectedMovie_cont{
+    background-color: white;
+}
+
+.DialogContent{
+    height: 500px;
+    overflow: auto;
+}
+.DialogContent::-webkit-scrollbar{
+    width: 5px;
+}
+
+.MainBackGround {
+    background-size:cover;
+    width: 100%;
+    height:450px;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+.MainBackGround::-webkit-scrollbar{
+    width: 0px
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Roboto:wght@400;500;700&display=swap");
+
+.overveiwContent {
+    font-size: medium;
+}
+.left_box {
+    color: #fff !important;
+    margin: 15px 0;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.topTitle_Movie {
+    font-weight: 700;
+}
+.casting img:hover {
+    height: 80px;
+    width: 80px;
+}
+
+.ratingcont{
+    position: absolute;
+    bottom: 0;
+}
+
+.trailer_bttn {
+    margin-top: 15px;
+    text-decoration: none !important;
+    color: #fff !important;
+    border-radius: 0.4em;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-weight: 400;
+    padding: 4px 9px;
+    background: #43a8ae;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border-color: #43a8ae !important;
+}
+
+.trailerContainer {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+
+.youtube_container {
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.close_bttn {
+    z-index: 100;
+    text-decoration: none !important;
+    color: #fff !important;
+    border-radius: 0.4em;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 4px 9px;
+    background: #43a8ae;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border-color: #43a8ae !important;
+    transition: width 0.2s, height 0.2s;
+}
+
+.close_bttn:hover {
+    padding: 5px 12px;
+}
+.DisplayOn {
+    display: flex;
+    justify-content: center;
+}
+.DisplayOFF {
+    display: none;
+}
+
+
+
+.recommendedMusic{
+    margin: 20px 0;
+}
+.recommendedGrid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+

@@ -1,0 +1,206 @@
+.friendsidebar{
+    width: 224px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2F3136;
+}
+.addfriend_Btn{
+    background-color: #2e7377;
+    width: 80%;
+    height: 30px;
+    margin-top: 12px;
+    outline: none;
+    border: 0px none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+.addfriend_Btn:focus{
+    outline: none;
+}
+
+.friend_section{
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.friend_section span{
+    color: #707376e2;
+}
+.pending{
+    width: 100%;
+    height: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+.pending::-webkit-scrollbar{
+    width: 1px;
+}
+.friendList{
+    flex-grow: 1;
+    width: 100%;
+    overflow: auto;
+}
+.friendList::-webkit-scrollbar{
+    width: 1px;
+}
+
+.inputEmail_dilogue{
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    margin: 13px 0;
+    padding: 7px 10px;
+    font-size: 13px;
+    border: 1px solid black;
+    background-color: #2F3136;
+    color: white;
+}
+
+.dilogue_heading{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2F3136;
+    margin-bottom: -3px;
+}
+
+.actionDilogue{
+    margin: 0 13px;
+    margin-top: -10px;
+}
+.btn_send_disable{
+    background-color: #7d7d7d5e!important;
+    pointer-events: none;
+    width: 100%!important;
+    color: white!important;
+    margin-top: -10px!important;
+    outline: none!important;
+}
+.btn_send_dilogue{
+    width: 100%!important;
+    background-color: #2e7377!important;
+    color: white!important;
+    margin-top: -10px!important;
+    outline: none!important;
+}
+.btn_send_dilogue:focus, .btn_send_dilogue:active{
+    border: 0px none!important;
+    outline: none;
+}
+.btn_cancel_dilogue:focus, .btn_cancel_dilogue:active{
+    outline: none;
+    border: 0px none!important;
+}
+.btn
+.error{
+    margin-top: -10px;
+    text-align: center;
+    font-size: 12px;
+}
+.error p{
+    color: rgba(255, 0, 0, 0.647)
+}
+.errorInput{
+    border:3px solid rgba(255, 0, 0, 0.647)!important;
+    color:  rgba(255, 0, 0, 0.936)!important;;
+}
+
+
+
+.friendListItemBtn{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    outline: none;
+    border:0px none;
+    background-color: transparent;
+    padding: 0px 8px;
+    height: 45px;
+}
+.friendListItemBtn:hover{
+    background-color: #2e737717;
+}
+.friendListItemBtn:focus{
+    background-color: #2e73770c;
+    outline: none;
+}
+.usernameFriendList{
+    color: #adb2b7;
+    margin-left: 10px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.onlineIndicator{
+    color: #47acb1;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+}
+.onlineIndicator i{
+    font-size: 10px;
+}
+
+
+/* pending list item */
+.pendingItem_cont{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    outline: none;
+    border:0px none;
+    background-color: transparent;
+    padding: 0px 8px;
+    height: 45px;
+    cursor: pointer;
+}
+.pendingItem_cont:hover{
+    background-color: #2e737717;
+}
+
+.invitaion_buton_wraper{
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+}
+.usernamePendingList{
+    margin-left: 7px;
+    font-weight: 500;
+    font-size: 14px;
+    flex-grow: 1;
+    color: #adb2b7;
+}
+.invitaion_buton_wraper button{
+    background-color: transparent;
+    outline: none;
+    width: 20px;
+    border: 0px none;
+    color: white;
+}
+
+.alertDilogue_{
+    margin-top: 20rem;
+}
+
+.blockButton button{
+    pointer-events: none;
+}
+.noFriend{
+    text-align: center;
+    margin-top: 40%;
+    color: rgba(255, 255, 255, 0.562);
+    font-size: 14px;
+}

@@ -1,0 +1,85 @@
+.avtar{
+    height: 40px;
+    width: 40px;
+    background-color: #43a8ae;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 5px;
+    color: white;
+    margin: 0px 2px;
+}
+
+.avtarImage{
+    height: 50px;
+    width: 50px;
+}
+.avtarBigImage{
+    height: 140px;
+    width: 140px;
+}
+.avtarImage, .avtarBigImage, .avtarIcon{
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 5px;
+    color: white;
+    overflow: hidden;
+    margin: 0px 2px;
+}
+.avtarIcon{
+    margin: none!important;
+    margin-left: 5px!important;
+    width: fit-content;
+}
+.avtarBigImage img{
+    height: 140px;
+    width: 140px;
+    border-radius: 100%;
+}
+.avtarImage img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.avtarIcon img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+.avtarLarge{
+    height: 90px;
+    width: 90px;
+    background-color: #43a8ae;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 5px;
+    color: white;
+}
+.avtarExtraLarge{
+    height: 140px;
+    width: 140px;
+    background-color: #43a8ae;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-left: 5px;
+    color: white;
+}
+.alert div{
+    background-color: white!important;
+    z-index: 1000;
+}
