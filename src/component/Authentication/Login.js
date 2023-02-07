@@ -103,7 +103,7 @@ function Login(props){
                                 new Date().getTime() + remainingMilliseconds
                             );
                             localStorage.setItem('expiryDate', expiryDate.toISOString());
-                            //props.autoLogout(remainingMilliseconds);
+                            props.autoLogout(remainingMilliseconds);
                             navigate('/dashboard');   
                     }
                     else
