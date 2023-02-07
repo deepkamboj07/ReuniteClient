@@ -66,7 +66,7 @@ export default function SelectedMovie(props) {
             Response.json().then((data) => gotTMDBData(data))
        );
 
-    fetch(`http://localhost:5000/api/similarity/${props.movie}`).then((Response) =>
+    fetch(`https://reuniterecommendationserver.onrender.com/api/similarity/${props.movie}`).then((Response) =>
         Response.json().then((data) => gotRecommendedData(data))
     );
   },[props.movie])

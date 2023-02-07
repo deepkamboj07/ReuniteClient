@@ -15,7 +15,7 @@ export default function SelectedMusic(props) {
   const [recomendData, setRecomendData]=React.useState(null);
 
   React.useEffect(()=>{
-      fetch(`http://localhost:5000/api/music-recomendation-based-on-select/${props.song.song_id}`).then(data=>{
+      fetch(`https://reuniterecommendationserver.onrender.com/api/music-recomendation-based-on-select/${props.song.song_id}`).then(data=>{
         data.json().then(result=> setRecomendData(result.result));
       })
   },[props.song.song_id]);

@@ -21,7 +21,7 @@ export default function MusicRecomand(props) {
   const [select, setSelect]=React.useState(false);
   const [selectedMusic, setSelectedMusic]=React.useState(null);
   React.useEffect(()=>{
-        fetch(`http://localhost:5000/api/randomMusic`).then((Response) =>
+        fetch(`https://reuniterecommendationserver.onrender.com/api/randomMusic`).then((Response) =>
           Response.json().then((data) => setMusic(data.result))
       );
   },[props.open]);
@@ -36,7 +36,7 @@ export default function MusicRecomand(props) {
     }
     else
     {
-      fetch(`http://localhost:5000/api/song-by-id/${index}`).then((Response) =>
+      fetch(`https://reuniterecommendationserver.onrender.com/api/song-by-id/${index}`).then((Response) =>
           Response.json().then((data) => setSelectedMusic(data.result[0]))
       );
       setSelect(true);
