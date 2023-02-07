@@ -2,7 +2,7 @@ const data=[
     {
         id:'1',
         name:'Tic Tac Toe',
-        image:'https://reuniteserverr.onrender.com/profile/ticTacGame.JPG'
+        image:'https://reuniteserverr.onrender.com/profile/ticTacGame.jpg'
     },
     {
         id:'2',
