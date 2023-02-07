@@ -21,8 +21,8 @@ export default function TicTac(props) {
     const [turn, setTurn] = useState("x");
     const [winner, setWinner] = useState(null);
 
-    let audioTurn = new Audio('http://localhost:5002/profile/ting.mp3');
-    let gameOver = new Audio('http://localhost:5002/profile/gameover.mp3');
+    let audioTurn = new Audio('https://reuniteserverr.onrender.com/profile/ting.mp3');
+    let gameOver = new Audio('https://reuniteserverr.onrender.com/profile/gameover.mp3');
     const checkEndTheGame = () => {
         for (let square of squares) {
             if (!square) return false;
