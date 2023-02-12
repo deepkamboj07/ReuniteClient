@@ -5,14 +5,26 @@ import AlertError from '../../../compo/Alert';
 import { Fragment, useEffect, useState } from 'react';
 import { rejectInvitation, acceptInvitation } from '../friendsFunctions';
 import { friendsAction } from '../../../../store/friendsStore';
+import { soundAction } from '../../../../store/soundStore';
+
+const audio=new Audio('./request_pop_up.wav');
 
 const PendingInvitaionList=()=>{
-
     const dispatch=useDispatch();
     const [msg,setMsg]=useState('');
     const [isNotify,setNotify]=useState(false);
     const [notificationType, setType]=useState('success');
     const token=localStorage.getItem('token');
+    const sound=useSelector(state=> state.sound.soundType);
+    
+    useEffect(()=>{
+            if(sound)
+            {
+                audio.autoplay=true;
+                audio.play().then(e=>console.log(e)).catch(err=>console.log(err));
+                dispatch(soundAction.stopSound());
+            }
+    },[sound,dispatch])
 
     const acceptRequest=(id,senderId)=>{
         acceptInvitation(id,token,senderId).then(res=>{
@@ -29,11 +41,6 @@ const PendingInvitaionList=()=>{
         });
     }
 
-    useEffect(()=>{
-        setTimeout(()=>{
-            setNotify(false);
-        },1000)
-    })
     //handler reject request
     const rejectRequest=(id)=>{
         rejectInvitation(id,token).then(res=>{
@@ -50,6 +57,7 @@ const PendingInvitaionList=()=>{
         })
     }
 
+
     const pendingData=useSelector(state=>state.friend.friendPendingList);
     let data;
     if(pendingData.length>0)
@@ -64,6 +72,14 @@ const PendingInvitaionList=()=>{
             />
         ))
     }
+    else document.title="Reunite"
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setNotify(false);
+        },1000)
+    });
+
 
 
        return(

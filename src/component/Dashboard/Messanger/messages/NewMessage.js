@@ -6,6 +6,7 @@ import { sendUserTyping } from '../../../../RealTimeCommunication/socketConnecti
 const NewMessage=(props)=>{
     const [message, setMessage]=useState('');
     const [error , setError]=useState(true);
+    let audioTurn = new Audio('/message_send.mp3');
 
     const msgHanler=(event)=>{
 
@@ -44,6 +45,8 @@ const NewMessage=(props)=>{
             recevierId:props.id,
             content:message
         });
+
+        audioTurn.play();
         // getdirectChatHistory({
         //     recevierId:props.id
         // })

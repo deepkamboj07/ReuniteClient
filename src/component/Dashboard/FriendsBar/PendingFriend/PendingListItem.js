@@ -1,6 +1,8 @@
 import classes from '../friendsidebar.module.css';
 import AvtarPreview from '../../../compo/AvtarPreview';
 import { Tooltip } from '@mui/material';
+import { useEffect} from 'react';
+import { useSelector } from 'react-redux';
 
 const PendingListItem=(props)=>{
     const accept=()=>{
@@ -9,6 +11,21 @@ const PendingListItem=(props)=>{
     const reject=()=>{
         props.rejectHandler(props.id);
     }
+    const len=useSelector(state=>state.friend.friendPendingList.length);
+    if(len===0)
+    {
+        document.title=`Reunite`;
+    }
+    useEffect(()=>{
+        if(len && len > 0)
+        {
+            document.title=`( ${len} ) Reunite`;
+        }
+        else {
+            document.title=`Reunite`;
+        }
+    },[len]);
+
     return(
         <Tooltip title={props.mail}>
             <div className={classes.pendingItem_cont}>
@@ -18,8 +35,8 @@ const PendingListItem=(props)=>{
                 </div>
 
                 <div className={`${classes.invitaion_buton_wraper}`} >
-                    <button onClick={accept}><i className="fa-solid fa-check"></i></button>
-                    <button onClick={reject}><i className="fa-solid fa-xmark"></i></button>
+                    <button title='accept' onClick={accept}><i className="fa-solid fa-check"></i></button>
+                    <button title='reject' onClick={reject}><i className="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
         </Tooltip>  

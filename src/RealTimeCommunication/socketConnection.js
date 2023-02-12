@@ -5,6 +5,7 @@ import updateChatHistoryOfUser from '../sessions/chat';
 import { chatAction } from '../store/chatStore';
 import { newRoomCreated , updateActiveRoom} from './roomHandler';
 import * as WebRTCHandler from './WebRTCHandler';
+import { soundAction } from '../store/soundStore';
 let socket=null;
 export const connectWithSocketServer=(userDetail)=>{
     //console.log(userDetail);
@@ -22,7 +23,13 @@ export const connectWithSocketServer=(userDetail)=>{
 
     socket.on('friends-invitations',(data)=>{
         const pendingInvitations=data.pendingInvitations;
+        const prev=store.getState().friend.friendPendingList;
         store.dispatch(friendsAction.setPendingFriendInvitation(pendingInvitations));
+        if(pendingInvitations.length > prev)
+        {
+            store.dispatch(soundAction.setSound({soundType:'invitation'}));
+        }
+        else store.dispatch(soundAction.stopSound());
     })
 
     socket.on('friends-list',(data)=>{

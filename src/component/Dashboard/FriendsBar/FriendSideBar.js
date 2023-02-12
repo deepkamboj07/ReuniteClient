@@ -13,7 +13,7 @@ const FriendSideBar=()=>{
         setDilogue(false);
     };
     return(
-        <div className={classes.friendsidebar}>
+        <div className={classes.friendsidebar} allow='autoplay'>
             <Fragment>
                 <button className={classes.addfriend_Btn} onClick={dilogueHandler}>Add Friend</button>
                 <SendRequestDilogue openInvitation={openDilogue} handleClose={handleCloseDilogue} err={false}/>

@@ -52,7 +52,7 @@ export default function MovieRecomand(props) {
     React.useEffect(()=>{
       if(movieGenre.length>0){
         fetch(
-            `https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.gte=80&${apiKey}&release_date.lte=2019-12-12&with_genres=${encodeURI(
+            `https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.gte=100&${apiKey}&release_date.lte=2022-12-12&with_genres=${encodeURI(
                 movieGenre.join(",")
             )}`
         ).then(Response=>{
