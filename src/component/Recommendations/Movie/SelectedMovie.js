@@ -114,23 +114,23 @@ export default function SelectedMovie(props) {
                     <div className="row ">
                         <div className={'col-md-6 col-md-push-6 ' + classes.left_box}>
                             <h1 className={classes.topTitle_Movie}>
-                                {searchedMovie.title}{" "}
+                                {searchedMovie?.title}{" "}
                             </h1>
 
                             <p className={classes.overviewContent}>
-                                {searchedMovie.overview}
+                                {searchedMovie?.overview}
                             </p>
                             <div className={classes.ratingcont}>
                                 <div>
                                     <b>Rating{" : "}</b>
-                                    {searchedMovie.vote_average}
+                                    {searchedMovie?.vote_average}
                                     {"/10 "}
 
                                     <i className="fa-solid fa-star"></i>
                                 </div>
                                 <div>
                                     <b> Release Date </b>
-                                    {" : "} {searchedMovie.release_date}
+                                    {" : "} {searchedMovie?.release_date}
                                 </div>
                             </div>
                             <div>

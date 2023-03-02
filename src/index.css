@@ -165,6 +165,7 @@ code {
     display: flex;
     gap: 15px;
 }
+
 @media only screen and (max-width:734px) {
   .col-md-7{
       padding: 0px!important;

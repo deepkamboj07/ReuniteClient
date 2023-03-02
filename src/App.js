@@ -93,7 +93,11 @@ function App() {
       }/>
     }
 
-    <Route path="*" element={<Fragment><h1>Page Not Found</h1></Fragment>}/>
+    <Route path="*" element={<Fragment>
+          {splash && <Splashh/>}
+          {!splash && !authRedirect && <Navigate to="/auth" replace/>}
+          {!splash && authRedirect && <Navigate to="/Dashboard" replace/>}
+      </Fragment>}/>
   </Routes>
   );
 }
