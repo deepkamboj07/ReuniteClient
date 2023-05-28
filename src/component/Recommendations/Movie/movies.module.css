@@ -33,6 +33,7 @@
 
 .genreTagON {
     padding: 10px 20px;
+    position: relative;
     color: black !important;
     background-color: #b1b4b6;
     border-radius: 20px;
@@ -42,6 +43,24 @@
     margin: 4px 5px;
     border-bottom: 4px solid #43a8ae;
 }
+.genreTagON:before, .genreTagON:after {
+    position: absolute;
+    content: '';
+    background: white;
+    display: block;
+    width: 2px;
+    height: 15px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top:-20px;
+    right: 10px;
+}
+
+.genreTagON:after {
+    -webkit-transform: rotate(45deg);    
+    transform: rotate(45deg);
+}
+
 .genreTagON:hover {
     background-color: #adb5bd !important;
 }

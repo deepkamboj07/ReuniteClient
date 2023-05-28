@@ -19,8 +19,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const apiKey = "api_key=b97316ed479ee4226afefc88d1792909";
-let genre=[{title:'Action',choice:false},{title:'Adventure',choice:false},{title:'Comedy',choice:false},{title:'Horror',choice:false},{title:'Thriller',choice:false},{title:'Drama',choice:false},{title:'Science Fiction',choice:false},{title:'Romentic',choice:false}];
-
+let genre=[{title:'Action',choice:false,id:28},{title:'Adventure',choice:false,id:12},{title:'Comedy',choice:false,id:35},{title:'Horror',choice:false,id:27},{title:'Thriller',choice:false,id:53},{title:'Drama',choice:false,id:18},{title:'Science Fiction',choice:false,id:878},{title:'Romentic',choice:false,id:10749}];
 export default function MovieRecomand(props) {
 
     const [currMovies, setCurrMovies]=React.useState([]);
@@ -29,33 +28,32 @@ export default function MovieRecomand(props) {
     const [seeTrailer,setSeeTrailer]=useState(false);
     const [videoData, setVideoData]=useState(null);
     const [spiner, setSpiner]=useState(true);
-
-    let movieGenre=[];
-    if(intrest?.movies)
-    {
-        movieGenre=intrest.movies;
-    }
-
-    movieGenre.forEach(choice=>{
-       if(choice)
-       {
-          const ind= genre.findIndex(f=> f.title===choice);
-          if(genre[ind])
-          {
-            genre[ind].choice=true;
-          }
-       }
-    })
+    const [movieGenre,setMovieGenere]=useState(intrest.movies);
     // const [notification, setNotification]=React.useState(false);
     // const [errMsg,setMsg]=React.useState('');
-    // const [type,setType]=React.useState('error');
+    // const [type,setType]=React.useState('error')
     React.useEffect(()=>{
+
+      const selectG=[];
+      movieGenre?.forEach(g => {
+        const ind=genre.find(m=>m.title===g);
+        console.log(ind);
+        if(ind)
+        {
+          ind.choice=true;
+          selectG.push(ind.id);
+        }
+      });
+
+      console.log(movieGenre);
       if(movieGenre.length>0){
         fetch(
-          `https://api.themoviedb.org/3/discover/movie?${apiKey}&with_genres=${encodeURI(
-              movieGenre.join(",")
+          `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&release_date.lte=2018&${apiKey}&with_genres=${encodeURI(
+            selectG.join(',')
           )}`
         ).then(Response=>{
+
+            console.log(selectG);
             Response.json().then((data) => { 
               setCurrMovies(data.results)
               setSpiner(false);
@@ -99,6 +97,21 @@ export default function MovieRecomand(props) {
         setSeeTrailer(false);
     }
 
+    const handleSelectGenere=(index)=>{
+        const isThere=movieGenre.find(mov=>mov===genre[index].title);
+        if(isThere)
+        {
+            genre[index].choice=false;
+            const tmp=movieGenre.filter(t=>t!==genre[index].title);
+            setMovieGenere(tmp);
+        }
+        else
+        {
+          genre[index].choice=true;
+          setMovieGenere([...movieGenre,genre[index].title]);
+        }
+    }
+
   return (
     <div style={{backgroundColor:'black'}}>
       <Dialog
@@ -127,7 +140,7 @@ export default function MovieRecomand(props) {
             <div className={classes.buttonGrid}>
                 {
                     genre.map((g,index)=>(
-                     <div key={index} className={`${g.choice ? classes.genreTagON :classes.genreTagOFF}`}>
+                     <div key={index} className={`${g.choice ? classes.genreTagON :classes.genreTagOFF}`} onClick={()=>handleSelectGenere(index)}>
                         {g.title}
                       </div>
                     ))
